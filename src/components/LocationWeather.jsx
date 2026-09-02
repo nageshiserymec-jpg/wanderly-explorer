@@ -7,6 +7,7 @@ import {
   fetchWeatherByCoords,
   getCurrentPosition,
 } from "../services/weatherApi";
+import EmptyState from "./EmptyState";
 import SearchBar from "./SearchBar";
 import WeatherCard from "./WeatherCard";
 

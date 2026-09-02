@@ -5,6 +5,7 @@ import { useState } from "react";
 import DestinationCard from "../components/DestinationCard";
 import DestinationExplorer from "../components/DestinationExplorer";
 import Hero from "../components/Hero";
+import LocationWeather from "../components/LocationWeather";
 import { destinations } from "../data/destinations";
 
 export const Route = createFileRoute("/")({
