@@ -1,8 +1,11 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Calendar, Coins, Languages, MapPin } from "lucide-react";
 
+import ChatBot from "../components/ChatBot";
+import DestinationWeather from "../components/DestinationWeather";
 import EmptyState from "../components/EmptyState";
 import FamousPlaceCard from "../components/FamousPlaceCard";
+import ItineraryPlanner from "../components/ItineraryPlanner";
 import RemoteImage from "../components/RemoteImage";
 import { getDestinationById } from "../data/destinations";
 
@@ -115,7 +118,12 @@ function DestinationDetails() {
             ))}
           </dl>
         </div>
+
+        <div className="mt-14">
+          <DestinationWeather destination={destination} />
+        </div>
       </section>
+
 
       <section className="border-t border-border bg-card">
         <div className="container-page py-20 md:py-24">
@@ -142,6 +150,28 @@ function DestinationDetails() {
               message={`We're still curating the highlights for ${destination.name}.`}
             />
           )}
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-24">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="text-eyebrow text-accent">Ask anything</p>
+            <h2 className="mt-3 text-[clamp(1.9rem,4vw,3rem)] font-extrabold leading-tight text-foreground">
+              Your {destination.name} travel companion
+            </h2>
+            <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
+              How long to stay, what to eat, what to skip — ask in plain English and get a
+              practical answer grounded in {destination.name}.
+            </p>
+          </div>
+          <ChatBot destination={destination} />
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-card">
+        <div className="container-page py-20 md:py-24">
+          <ItineraryPlanner destination={destination} />
         </div>
       </section>
     </>

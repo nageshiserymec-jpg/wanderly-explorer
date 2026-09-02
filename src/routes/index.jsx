@@ -5,6 +5,7 @@ import { useState } from "react";
 import DestinationCard from "../components/DestinationCard";
 import DestinationExplorer from "../components/DestinationExplorer";
 import Hero from "../components/Hero";
+import LocationWeather from "../components/LocationWeather";
 import { destinations } from "../data/destinations";
 
 export const Route = createFileRoute("/")({
@@ -101,7 +102,11 @@ function Home() {
         onRegionChange={setRegion}
       />
 
-      <section id="plan" className="container-page scroll-mt-24 pb-24">
+      <div className="border-y border-border bg-card">
+        <LocationWeather />
+      </div>
+
+      <section id="plan" className="container-page scroll-mt-24 py-24">
         <div className="overflow-hidden rounded-3xl bg-primary px-8 py-16 text-center md:px-16 md:py-20">
           <p className="text-eyebrow text-on-dark-muted">Plan trip</p>
           <h2 className="mx-auto mt-4 max-w-2xl text-[clamp(1.75rem,4vw,2.75rem)] font-extrabold leading-tight text-primary-foreground">
