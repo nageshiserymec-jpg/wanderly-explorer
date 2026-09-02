@@ -1,8 +1,11 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Calendar, Coins, Languages, MapPin } from "lucide-react";
 
+import ChatBot from "../components/ChatBot";
+import DestinationWeather from "../components/DestinationWeather";
 import EmptyState from "../components/EmptyState";
 import FamousPlaceCard from "../components/FamousPlaceCard";
+import ItineraryPlanner from "../components/ItineraryPlanner";
 import RemoteImage from "../components/RemoteImage";
 import { getDestinationById } from "../data/destinations";
 
