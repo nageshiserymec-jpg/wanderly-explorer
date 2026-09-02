@@ -117,12 +117,20 @@ export default function LocationWeather() {
           </div>
         </div>
 
-        <WeatherCard
-          weather={weather}
-          loading={busy}
-          error={status === "error" ? error : ""}
-          onRetry={() => (city.trim() ? searchCity(city) : loadByCoords())}
-        />
+        {!busy && !weather && status !== "error" ? (
+          <EmptyState
+            icon={MapPin}
+            title="No weather yet"
+            message="Allow location access, or search for a city to see live conditions."
+          />
+        ) : (
+          <WeatherCard
+            weather={weather}
+            loading={busy}
+            error={status === "error" ? error : ""}
+            onRetry={() => (city.trim() ? searchCity(city) : loadByCoords())}
+          />
+        )}
       </div>
     </section>
   );
