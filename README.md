@@ -278,9 +278,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Nagesh Gorte**
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- GitHub: [@your-username](https://github.com/nageshiserymec-jpg)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/nageshgorte)
+- Email: nagesh.ise.rymec@gmail.com
 
 ---
 
